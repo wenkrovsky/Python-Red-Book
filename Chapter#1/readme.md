@@ -1,6 +1,22 @@
-# Hello
+# H
+### 函数的参数
+
+函数是绝大多数编程语言中都支持的一个代码的&quot;构建块&quot;，但是Python中的函数与其他语言中的函数还是有很多不太相同的地方，其中一个显著的区别就是Python对函数参数的处理。在Python中，函数的参数可以有默认值，也支持使用可变参数，所以Python并不需要像其他语言一样支持[函数的重载](https://zh.wikipedia.org/wiki/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD)，因为我们在定义一个函数的时候可以让它有多种不同的使用方式，下面是两个小例子。
+
+```Python
+from random import randint
+def roll_dice(n=2):
+    """摇色子"""
+    total = 0
+    for _ in range(n):
+        total += randint(1, 6)
+    return total
+def add(a=0, b=0, c=0):
+    """三个数相加"""
+    return a + b + c
+
 # 如果没有指定参数那么使用默认值摇两颗色子
-```
+
 print(roll_dice())
 # 摇三颗色子
 print(roll_dice(3))
