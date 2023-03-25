@@ -177,7 +177,7 @@ def foo():
     print(a)  # 200
 if __name__ == '__main__':
     a = 100
-    foo()
+    foo()  # 200
     print(a)  # 100
 ```
 
@@ -190,7 +190,7 @@ def foo():
     print(a)  # 200
 if __name__ == '__main__':
     a = 100
-    foo()
+    foo()  # 200
     print(a)  # 200
 ```
 
